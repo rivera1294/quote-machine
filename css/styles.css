@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: cyan;
+}
+
+.wrapper {
+    width: 1440px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.container {
+    width: 500px;
+    height: 350px;
+    background: white;
+    border-radius: 10px;
+    margin: 150px auto;
+}
+
+.new-quote {
+    width: 100px;
+    height: 100px;
+    background: red;
+}
