@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+p {
+    margin: 0;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     background: cyan;
@@ -15,14 +19,42 @@ body {
 
 .container {
     width: 500px;
-    height: 350px;
+    padding: 78px 32px;
     background: white;
-    border-radius: 10px;
+    border-radius: 5px;
     margin: 150px auto;
 }
 
+.quote-info {
+    position: relative;
+    top: -36px;
+}
+
+.quote {
+    font-size: 1em;
+    text-align: center;
+    transition: all 2s ease-in;
+}
+
+.author {
+    text-align: right;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.btns {
+    
+}
+
 .new-quote {
-    width: 100px;
-    height: 100px;
-    background: red;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background: cyan;
+    float: right;
+    cursor: pointer;
+}
+
+.fa-twitter-square {
+    float: left;
+    color: cyan;
 }

@@ -1,6 +1,7 @@
 (function($){
     var App = {
         init: function() {
+            this.cachDom();
             this.bindEvents();
         },
         getQuote: function() {
@@ -15,20 +16,34 @@
                     lang: "en"
                 },
                 success: function(data) {
-                    console.log(data.quoteText);
-                }
+                    if(data.quoteAuthor == "") {
+                        this.$author.html("unkown");
+                        this.$quote.html(data.quoteText);
+                    }
+                    else {
+                        this.$quote.html(data.quoteText);
+                        this.$author.html(data.quoteAuthor);
+                    }
+                    
+                }.bind(this)
                 })
             },
 
-        filterData: function(data) {
-            data.forEach(function(item){
-                console.log(item);
-            })
+        
+
+        setAuthor: function(data) {
+
+        },
+        cachDom: function() {
+            this.$quote = $(".quote");
+            this.$author = $(".author");
         },
 
         bindEvents: function() {
             $(".new-quote").on('click', this.getQuote.bind(this))
         }
+
+        
     }
 
     App.init();
