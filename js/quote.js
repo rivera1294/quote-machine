@@ -30,10 +30,6 @@
             },
 
         
-
-        setAuthor: function(data) {
-
-        },
         cachDom: function() {
             this.$quote = $(".quote");
             this.$author = $(".author");
